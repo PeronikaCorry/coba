@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Page</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="content">
+        <a href="/" class="button-header">Home</a>
+        <div class="dropdown">
+          <a class="button-header dropbtn" onclick="myFunction()">Table</a>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">User</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="isi">
+      <%= yield %>
+    </div>
+    <div class="footer">
+      COPYRIGHT
+    </div>
+  </body>
+</html>
